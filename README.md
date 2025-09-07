@@ -14,7 +14,7 @@
 
 ## Технологии
 
-- Python 3.11
+- Python
 - FastAPI
 - SQLAlchemy
 - asyncpg
