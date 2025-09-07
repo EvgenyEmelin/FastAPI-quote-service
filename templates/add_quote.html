@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить цитату</title>
+</head>
+<body>
+    <h1>Добавить цитату</h1>
+    <form action="/quotes/" method="post">
+        <label>Текст цитаты:</label><br />
+        <textarea name="text" rows="4" cols="50" required></textarea><br />
+
+        <label>Источник:</label><br />
+        <input type="text" name="source_name" required /><br />
+
+        <label>Вес (по умолчанию 1):</label><br />
+        <input type="number" name="weight" value="1" min="0.1" step="0.1" /><br />
+
+        <button type="submit">Добавить</button>
+    </form>
+    <p><a href="/">На главную</a></p>
+</body>
+</html>

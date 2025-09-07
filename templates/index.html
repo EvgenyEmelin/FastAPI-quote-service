@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Случайная цитата</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <h1>Случайная цитата</h1>
+    {% if quote %}
+    <blockquote>{{ quote.text }}</blockquote>
+    <p>Источник: {{ quote.source_id }}</p>
+    <p>Просмотров: {{ quote.views }}</p>
+    <p>Лайков: {{ quote.likes }} | Дизлайков: {{ quote.dislikes }}</p>
+
+    <form action="/quotes/{{ quote.id }}/like" method="post" style="display:inline;">
+        <button type="submit">Лайк</button>
+    </form>
+    <form action="/quotes/{{ quote.id }}/dislike" method="post" style="display:inline;">
+        <button type="submit">Дизлайк</button>
+    </form>
+    {% else %}
+    <p>Цитаты не найдены.</p>
+    {% endif %}
+
+    <p><a href="add">Добавить новую цитату</a></p>
+    <p><a href="top">Топ 10 цитат</a></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Топ 10 цитат</title>
+</head>
+<body>
+    <h1>Топ 10 цитат</h1>
+    <ul>
+    {% for quote in quotes %}
+        <li>
+            <blockquote>{{ quote.text }}</blockquote>
+            <p>Источник: {{ quote.source_id }}</p>
+            <p>Лайков: {{ quote.likes }} | Дизлайков: {{ quote.dislikes }} | Просмотров: {{ quote.views }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+    <p><a href="/">На главную</a></p>
+</body>
+</html>

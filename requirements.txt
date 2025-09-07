@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+databases[asyncpg]
+sqlalchemy
+jinja2
+aiofiles
+psycopg2-binary
+python-multipart
